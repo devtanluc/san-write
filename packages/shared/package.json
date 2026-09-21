@@ -1,0 +1,15 @@
+{
+	"name": "@san/shared",
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts",
+		"./*": "./src/*.ts"
+	},
+	"scripts": {
+		"check-types": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@san/config": "workspace:*",
+		"typescript": "catalog:"
+	}
+}

@@ -89,6 +89,7 @@
       "dependencies": {
         "@san/auth": "workspace:*",
         "@san/db": "workspace:*",
+        "@san/validation": "workspace:*",
         "@trpc/client": "catalog:",
         "@trpc/server": "catalog:",
         "@types/pg": "catalog:",
@@ -133,6 +134,13 @@
         "varlock": "catalog:",
       },
     },
+    "packages/shared": {
+      "name": "@san/shared",
+      "devDependencies": {
+        "@san/config": "workspace:*",
+        "typescript": "catalog:",
+      },
+    },
     "packages/ui": {
       "name": "@san/ui",
       "version": "0.0.0",
@@ -155,6 +163,18 @@
         "@types/react": "catalog:",
         "@types/react-dom": "catalog:",
         "tailwindcss": "catalog:",
+        "typescript": "catalog:",
+      },
+    },
+    "packages/validation": {
+      "name": "@san/validation",
+      "dependencies": {
+        "@san/db": "workspace:*",
+        "@san/shared": "workspace:*",
+        "zod": "catalog:",
+      },
+      "devDependencies": {
+        "@san/config": "workspace:*",
         "typescript": "catalog:",
       },
     },
@@ -700,7 +720,11 @@
 
     "@san/db": ["@san/db@workspace:packages/db"],
 
+    "@san/shared": ["@san/shared@workspace:packages/shared"],
+
     "@san/ui": ["@san/ui@workspace:packages/ui"],
+
+    "@san/validation": ["@san/validation@workspace:packages/validation"],
 
     "@sec-ant/readable-stream": ["@sec-ant/readable-stream@0.4.1", "", {}, "sha512-831qok9r2t8AlxLko40y2ebgSDhenenCatLVeW/uBtnHPyhHOvG0C7TvfgecV+wHzIm5KUICgzmVpWS+IMEAeg=="],
 
