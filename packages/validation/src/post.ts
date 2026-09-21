@@ -150,6 +150,9 @@ export const postListQuerySchema = z.object({
 
 // * Types
 
+export type PostVisibility = z.infer<typeof postVisibilitySchema>;
+export type PostStatus = z.infer<typeof postStatusSchema>;
+
 export type CreatePostInput = z.infer<typeof createPostSchema>;
 export type UpdatePostInput = z.infer<typeof updatePostSchema>;
 export type PublishPostInput = z.infer<typeof publishPostSchema>;
